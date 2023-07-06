@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // let a = { a: [undefined] }
+
+        // console.log(JSON.stringify(a))
+
+        // console.log(
+        //     JSON.stringify({ myArray: ["one", undefined, function () { }, Symbol("")] })
+        // );
+        // console.log(
+        //     JSON.stringify({ [Symbol.for("one")]: "one" }, [Symbol.for("one")])
+        // );
+
+
+        // const [x,y, ...z] = [1, 2, 3, 4];
+        // console.log(x, y, z);
+
+
+        // const { a: x = 10,
+        //         b: y = 20 } = { a: 30 };
+
+        // console.log(x);
+        // console.log(y);
+
+
+        // const props = [
+        //     { id: 1, name: "John" },
+        //     { id: 2, name: "Jack" },
+        //     { id: 3, name: "Tom" },
+        // ];
+        // console.log(props)
+        // let b={...props}
+        // console.log(b)
+        // const [, , { name }] = props;
+        // console.log(name);
+
+
+        function checkType(num = 1) {
+            console.log(typeof num);
+        }
+
+        checkType();
+        checkType(undefined);
+        checkType("");
+        checkType(null);
+
+
+        function add(item, items = []) {
+            items.push(item);
+            return items;
+        }
+
+        console.log(add("Orange"));
+        console.log(add("Apple"));
+
+
+        function greet(greeting, name, message = greeting + " " + name) {
+            console.log([greeting, name, message]);
+        }
+
+        greet("Hello", "John");
+        greet("Hello", "John", "Good morning!");
+
+        function myFun(x, y, ...manyMoreArgs) {
+            console.log(manyMoreArgs);
+        }
+
+        myFun(1, 2, 3, 4, 5);
+        myFun(1, 2);
+
+
+        const obj = { key: "value" };
+        const array = { ...obj };
+        console.log(array);
+
+        function* yieldAndReturn() {
+            yield 1;
+            return 2;
+            yield 3;
+        }
+
+        var myGenObj = yieldAndReturn();
+        console.log(myGenObj.next());
+        console.log(myGenObj.next());
+        console.log(myGenObj.next());
+
+
+        const myGenerator = (function* () {
+            yield 1;
+            yield 2;
+            yield 3;
+        })();
+        for (const value of myGenerator) {
+            console.log(value);
+            break;
+        }
+
+        for (const value of myGenerator) {
+            console.log(value);
+        }
+
+    </script>
+</body>
+
+</html>

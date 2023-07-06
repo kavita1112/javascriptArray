@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="eventdel">
+        <li>hi</li>
+        <li>hello</li>
+        <li>bye</li>
+    </ul>
+    <script>
+      let parent=document.getElementById("eventdel");
+      parent.addEventListener("click",(e)=>{
+       console.log(e.target.innerHTML);
+
+      })
+
+      function person(name,age){
+        this.name=name;
+        this.age=age;
+      }
+
+      let newperson=new person("john",23)
+      console.log(newperson);
+
+      class Person{
+        constructor(name,age){
+            this.name=name;
+            this.age=age;
+        }
+      }
+
+      let newobject=new Person("kavitha",32)
+      console.log(newobject)
+
+      function callm(){
+        console.log(this)
+        console.log("hello"+ " " +this.name)
+      }
+      let callme={name:"kavitha"}
+      callm.call(callme)
+
+      function applym(message){
+        console.log(message + " "+this.name)
+      }
+      let applyme={name:"ho"}
+      applym.apply(applyme,["gretting"])
+
+      function bindfu(){
+        console.log("hello"+this.name)
+      }
+    let bindme={name:"kavitha"}
+    let bindfunction=bindfu.bind(bindme)
+    bindfunction()
+
+
+    let arrdupli=[1,2,2,3,3,4,9]
+    let arrunique=[...new Set(arrdupli)]
+    console.log(arrunique)
+
+
+    let destru={
+      name:"kavitha",
+      course:"mern"
+    }
+    
+    let {name,course}=destru
+    console.log(name)
+
+    function main(){
+      setTimeout
+    }
+    </script>
+</body>
+</html>

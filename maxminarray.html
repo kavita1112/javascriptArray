@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr=[2,3,4,5,10,4]
+    let arrMaxi=null;
+    for (let i=0; i<arr.length; i++){
+        // console.log(arr[i])
+       if(arr[i] > arrMaxi)
+    //    console.log(arr[i])
+       arrMaxi=arr[i]
+    }
+     console.log(arrMaxi)
+
+     let arr2=[10,30,40,15]
+     let largestArr=null;
+     let secondLargestArr=null;
+  
+     for (let i=0; i<arr2.length; i++){
+        if(arr2[i]>largestArr ){
+         
+            secondLargestArr=largestArr
+            largestArr=arr2[i]
+        }
+     }
+     console.log(secondLargestArr)
+
+
+     
+let array=[2,3,10,7,8,11,9,1]
+  
+for(let i=0; i<array.length; i++){
+    for (let j=0; j<array.length; j++){
+        if(array[j]>array[j+1]){
+            let temp=array[j]
+            array[j]=array[j+1]
+            array[j+1]=temp
+              }
+    }
+}
+
+console.log(array)
+
+let obj={};
+let array1=[2,3,4,2,3,4,5,6,7,5,6]
+
+if(obj[array1]){
+    obj[array1]  + 1
+}else{
+    obj[array1]=1
+}
+console.log(obj)
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let array=[2,3,4,5]
+     console.log(array.indexOf(9))
+
+     console.log(array.includes(3))
+
+     let arr=["a","b","c"]
+     console.log(arr.includes("b"))
+
+     let myArr=[
+        {name:"a",age:23},
+        {name:'b',age:23},
+        {name:'c',age:23}
+        ]
+
+        let filtered=myArr.filter((ele)=>{
+            return !ele.name.includes("a")
+        })
+        console.log(filtered)
+
+
+        let arr1=[12,19,11,15,20,230,23,190,110,120]
+        
+        console.log(arr1.sort((a,b)=>{
+            // if(a>b) return -1;
+            // if(a<b) return 1;
+            //  else return 0
+
+            return  a==b?0:a>b?1:-1
+        }))
+
+
+        let arr2=[6,9,20,19,15,16]
+
+        for(let i=0; i < arr2.length; i++){
+            for(j=0; j < arr2.length; j++){
+                if(arr2[j] < arr2[j+1]){
+                    let temp= arr2[j]
+
+                    arr2[j]=arr2[j+1]
+                    arr2[j+1]=temp;
+                }
+               
+            }
+        }
+        
+        console.log(arr2)
+
+        let strings=['hello','hi','hye']
+        console.log(strings.sort())
+
+
+        let everyArr=[2,7,3,20]
+        let everyArr1=everyArr.every((ele)=>{
+            return ele < 0
+        })
+
+        console.log(everyArr1)
+
+        let someArr=[5,8,10,20]
+        let someArr1=someArr.some((ele)=> ele >= 20)
+        console.log(someArr1)
+
+        let foreach=[2,8,0,3,4]
+        foreach.forEach((ele)=>{
+            console.log(ele)
+        })
+       
+
+        let c1=[2,3,4,5]
+        let c2=[6,7,8,9,10]
+        let combine=c1.concat(c2)
+        console.log(combine)
+        console.log(c1.concat(c2))
+        console.log("c1",c1)
+        console.log("c2",c2)
+    </script>
+</body>
+</html>

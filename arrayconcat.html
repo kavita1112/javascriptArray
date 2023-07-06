@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [2, 5, 6, 7, 8]
+        let arr2 = [4, 6, 9, 10]
+        console.log(arr1.concat(arr2))
+
+        let arr3 = [4, 7, 8, 5, 4]
+        console.log(arr3.fill(2, 2, 3))
+
+        let arr4 = [2, 3, 4, 5]
+        let a = arr4.values();
+
+        for (const ele of a) {
+            console.log(ele);
+        }
+
+        let arr5=[2,6,7,9,10]
+        console.log(arr5.find(ele => ele > 7))
+
+
+        let arr6=[2,6,7,9,10]
+        console.log(arr6.splice(3,2));          //[9,10]
+        console.log(arr6);                            //[2,6,7,11,12]
+      
+
+        let arr7=[2,4,6,8,10]
+        console.log(arr7.reverse())
+
+        let join=['red','pink','green','yellow']
+        console.log(join.join("@"))
+
+        let sort=[1,3,6,8,10,0,2]
+
+        console.log(sort.sort((a,b)=>a-b))
+        console.log(sort.sort((a,b)=>b-a))
+    </script>
+</body>
+
+</html>

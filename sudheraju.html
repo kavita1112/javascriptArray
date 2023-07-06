@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1helo {
+            background-color: pink;
+            padding: 10px;
+        }
+
+        .spanhi {
+            background-color: red;
+            margin-bottom: 20px;
+            width: 20px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="h1helo">hello</h1>
+        <span class="spanhi">hi</span>
+        <span class="spanhi">hi</span>
+    </div>
+    <script>
+
+        function outer() {
+            let outerfun = "iam hello"
+            function inner() {
+                let innerfun = "i am well"
+                console.log(outerfun)
+                console.log(innerfun)
+            }
+            inner()
+        }
+
+        outer()
+        // function outerFunction() {
+        //     const outerVariable = 'I am from outer function';
+
+        //     function innerFunction() {
+        //         const innerVariable = 'I am from inner function';
+        //         console.log(outerVariable); // Accessible here
+        //         console.log(innerVariable); // Accessible here
+        //     }
+
+        //     innerFunction();
+        // }
+
+        // outerFunction();
+
+        let a = 10;
+        if (true) {
+            let a = 20;
+            console.log(a, "inside");
+        }
+        console.log(a, "outside");
+
+        function greeting() {
+            setTimeout(function () {
+                console.log(message);
+            }, 5000);
+            const message = "Hello, Good morning";
+        }
+        greeting();
+
+
+        let obj = {
+            n: "kavitha",
+            a: 23,
+        }
+        let obj1 = {
+            name: "kavitha",
+            age: 23,
+        }
+
+        console.log(obj == obj1)
+
+
+        let [ka, ...vi] = [1, 2, 3, 4]
+        console.log(ka, vi)
+
+
+        async function func() {
+            return await 10;
+        }
+        console.log(func());
+
+  
+    </script>
+</body>
+
+</html>

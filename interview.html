@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = () => {
+            // let b=20;
+            // console.log(b)
+            // console.log(arguments[0])
+        }
+        a(10, 20);
+
+
+
+        function decleration() {
+            console.log(arguments[0])
+            console.log(arguments[1])
+        }
+
+        decleration(10, 20)
+
+
+        //shallow copy
+
+        let object = {
+            name: "kavitha",
+            age: 23,
+            address: {
+                city: "rayachoty",
+                distric: "kadapa"
+            }
+        }
+        console.log(object)
+        let b = { ...object }
+        b.name = "kavya"
+        console.log(b)
+        b.address.city = "banglore"
+
+
+        let c = JSON.parse(JSON.stringify(object))
+        console.log(c)
+        console.log(c.name = "navya")
+
+        //reset operator
+
+        function d(...b) {
+            return b.reduce((acc, currentvalue, element, array) => {
+                return acc + currentvalue
+
+
+            }, 0)
+
+        }
+
+        console.log(d(10, 20, 30, 40, 50))
+
+        let arr = [5, 10, 15]
+
+        let arr2 = arr.filter((num) => {
+            if (num % 5 === 0) return num
+        })
+
+        console.log(arr2)
+
+
+        function callfun(message){
+            console.log(message + " "+this.name)
+
+        }
+        let person={
+            name:"kavitha"
+        }
+       callfun.apply(person,['helo'])
+
+       let bindfun=callfun.bind(person)
+        bindfun('helo')
+        
+
+    </script>
+</body>
+
+</html>

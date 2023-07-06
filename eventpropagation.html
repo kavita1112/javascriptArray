@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 100px;
+            padding: 60px;
+            background-color: rgb(165, 32, 32);
+        }
+        #box2{
+            width: 75px;
+            padding: 30px;
+            background-color: rgb(116, 32, 165);
+        }
+        #box3{
+            width: 50px;
+            padding: 20px;
+            background-color: rgb(32, 165, 34);
+        }
+    </style>
+</head>
+<body>
+ <div id="box1">
+    <div id="box2">
+        <div id="box3">
+
+        </div>
+    </div>
+ </div>
+    <script>
+document.getElementById("box1").addEventListener('click',(()=>{
+    console.log('green')
+}),false)
+document.getElementById("box2").addEventListener('click',(()=>{
+    console.log('yello')
+}),true)
+document.getElementById("box3").addEventListener('click',(()=>{
+    console.log('pink')
+}),false)
+    </script>
+</body>
+</html>
